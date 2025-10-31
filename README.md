@@ -1,5 +1,76 @@
 🧭 ESP32-C3 BLE Media Controller
 
+⚡ ESP32-C3 BLE Media Controller — Bağlantı Şeması
+🧩 Malzemeler:
+
+ESP32-C3 SuperMini
+
+Rotary Encoder (3 pinli sinyal + 2 pinli buton)
+
+1x Harici LED
+
+1x 220Ω direnç
+
+Breadboard ve jumper kablolar
+
+🔌 Bağlantı Şeması (metin olarak)
+Bileşen	ESP32-C3 Pin	Açıklama
+Rotary Encoder A	GPIO 4	Encoder sinyali A
+Rotary Encoder B	GPIO 5	Encoder sinyali B
+Encoder Butonu (SW)	GPIO 6	Basıldığında Mute/Play komutu gönderir
+Harici LED (+)	GPIO 2	Durum LED’i (bağlantı / bekleme)
+Harici LED (-)	GND	Direnç (220Ω) üzerinden bağla
+ESP32 Dahili LED	GPIO 8 (çoğu ESP32-C3 SuperMini’de yerleşik)	Kodda eşzamanlı yanar
+VCC	3V3	Güç
+GND	GND	Ortak toprak
+💡 LED Durumları
+Durum	LED Davranışı
+Güç verildi, bekliyor	Yanıp sönüyor
+Bluetooth bağlı	Sürekli yanıyor
+PC bağlantısı kesildi	Tekrar yanıp sönmeye başlar
+🧠 Proje Özeti (README / GitHub için)
+🇹🇷 Türkçe Açıklama
+
+Bu proje, ESP32-C3 SuperMini kullanarak yapılan bir Bluetooth Medya Denetleyici (BLE Keyboard) uygulamasıdır.
+Cihaz, bilgisayarınıza Bluetooth klavye olarak bağlanır ve
+
+Rotary encoder ile ses seviyesini artırıp azaltabilir,
+
+Butona basarak sesi kapatabilir (Mute) veya çalmayı durdurup başlatabilir,
+
+Bağlantı durumuna göre LED yanıp sönme efektleriyle kullanıcıya görsel geri bildirim sağlar.
+
+Özellikler:
+
+ESP32-C3 BLE desteği (NimBLE tabanlı)
+
+LED durum göstergesi (harici + dahili LED senkron)
+
+Düşük güç tüketimi
+
+Windows / macOS / Linux desteği
+
+Arduino IDE uyumlu
+
+🇬🇧 English Description
+
+This project is a Bluetooth Media Controller (BLE Keyboard) built with the ESP32-C3 SuperMini.
+Once powered on, it waits for Bluetooth pairing while blinking LEDs.
+When connected, LEDs stay solid, and the encoder controls the PC volume via Bluetooth HID.
+The push button toggles Mute or Play/Pause functions.
+
+Features:
+
+ESP32-C3 BLE Keyboard (NimBLE-based)
+
+Dual LED indicator (external + onboard LED)
+
+Low power, fast connection
+
+Works with Windows, macOS, Linux
+
+Arduino IDE compatible
+
 🇹🇷 Türkçe Açıklama
 🎯 Proje Özeti
 
